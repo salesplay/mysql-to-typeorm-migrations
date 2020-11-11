@@ -1,0 +1,41 @@
+{
+  "name": "mytypeorm",
+  "version": "1.0.0",
+  "description": "A command line interface to generate TypeORM migrations from the existing mysql database.",
+  "main": "index.js",
+  "scripts": {
+    "compile": "rimraf ./build && tsc"
+  },
+  "bin": {
+    "mytypeorm": "./cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salesplay/mytypeorm.git"
+  },
+  "keywords": [
+    "typeorm",
+    "cli",
+    "migrations"
+  ],
+  "author": "WhizSid <whizsid@aol.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/salesplay/mytypeorm/issues"
+  },
+  "homepage": "https://github.com/salesplay/mytypeorm#readme",
+  "dependencies": {
+    "camelcase": "^6.2.0",
+    "mysql2": "^2.2.5",
+    "typeorm": "^0.2.29",
+    "yargonaut": "^1.1.4",
+    "yargs": "^16.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.7",
+    "@types/yargs": "^15.0.9",
+    "rimraf": "^3.0.2",
+    "tslib": "^2.0.3",
+    "typescript": "^4.0.5"
+  }
+}
