@@ -25,12 +25,12 @@ my_password --output-directory ./migrations --child-name "table_name"
 
 # Features
 
-[x] Unique Indexes
-[x] Primary Indexes
-[x] Enums
+- [x] Unique Indexes
+- [x] Primary Indexes
+- [x] Enums
 
 # To Do
-[] Foreign keys
+- [ ] Foreign keys
 
 
 ## Contributions
