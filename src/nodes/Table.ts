@@ -187,7 +187,7 @@ export class Table implements Generate {
             + indent + "}\n"
             + "}";
 
-        const fileName = join(this.outputFolder, time + "-" + pascalClassName + ".ts");
+        const fileName = join(this.outputFolder, time + "-" + className + ".ts");
 
         writeFileSync(fileName, content);
     };
