@@ -1,6 +1,7 @@
 import yargs = require('yargs');
 import { createConnection } from '../utils';
 import { Table } from '../nodes/Table';
+import { Generate } from 'src/Generate';
 
 export class ChildCommand implements yargs.CommandModule {
 

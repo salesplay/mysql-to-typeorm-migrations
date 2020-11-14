@@ -1,5 +1,6 @@
 import { Connection, RowDataPacket } from 'mysql2/promise';
 import { Table } from './Table';
+import { Generate } from '../Generate';
 
 export class Database implements Generate {
     private connection: Connection;

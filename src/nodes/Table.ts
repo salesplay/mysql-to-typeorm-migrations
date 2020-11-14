@@ -4,6 +4,7 @@ import { join } from "path";
 import camelCase = require("camelcase");
 import { TableOptions } from 'typeorm/schema-builder/options/TableOptions';
 import { TableColumnOptions } from "typeorm/schema-builder/options/TableColumnOptions";
+import { Generate } from '../Generate';
 
 export class Table implements Generate {
     private connection: Connection;
@@ -53,18 +54,18 @@ export class Table implements Generate {
                 column.onUpdate = "CURRENT_TIMESTAMP";
             }
 
-            if (row.Default == "current_timestamp()") {
+            if (row.NUll == "YES") {
+                column.isNullable = true;
+            }
+
+            if (row.Default == "current_timestamp()" || row.Default == "CURRENT_TIMESTAMP") {
                 column.default = "CURRENT_TIMESTAMP"
-            } else if (row.Default == null) {
+            } else if (row.Default == null && column.isNullable) {
                 column.default = "NULL"
             } else if (!isNaN(parseInt(row.Default))) {
                 column.default = row.Default;
-            } else {
+            } else if (row.Default != null) {
                 column.default = '"' + row.Default + '"';
-            }
-
-            if (row.NUll == "YES") {
-                column.isNullable = true;
             }
 
             if (typeof table.columns != 'undefined') {

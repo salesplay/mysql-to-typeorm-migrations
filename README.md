@@ -4,7 +4,9 @@ A CLI to generate typeorm migrations from an exist mysql database
 ## Installation
 
 ```
-npm install -g git+https://github.com/salesplay/mytypeorm.git
+git clone https://github.com/salesplay/mytypeorm.git
+cd mytypeorm
+yarn -D
 ```
 
 ## Usage
@@ -12,14 +14,14 @@ npm install -g git+https://github.com/salesplay/mytypeorm.git
 To generate migrations of all tables.
 
 ```
-mytypeorm all --host 127.0.0.1 --port 3306 --username root --password \
+yarn cli all --host 127.0.0.1 --port 3306 --username root --password \
 my_password --output-directory ./migrations
 ```
 
 To generate a migration of a specific table.
 
 ```
-mytypeorm child --host 127.0.0.1 --port 3306 --username root --password \
+yarn cli child --host 127.0.0.1 --port 3306 --username root --password \
 my_password --output-directory ./migrations --child-name "table_name"
 ```
 

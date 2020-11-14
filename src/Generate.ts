@@ -1,3 +1,3 @@
-interface Generate {
+export interface Generate {
     generate(): Promise<any>;
 }
